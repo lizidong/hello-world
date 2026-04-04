@@ -1,0 +1,22 @@
+name: WSL Control Task
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    # ここにWSLで設定したラベルを指定します
+    runs-on: [self-hosted, linux] 
+
+    steps:
+      - name: Check environment
+        run: |
+          echo "Running on WSL!"
+          lsb_release -a
+          pwd
+          
+      - name: Execute your script
+        run: |
+          # ここにWSL上で実行したいコマンドを書く
+          python3 --version
