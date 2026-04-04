@@ -3,6 +3,7 @@ name: WSL Control Task
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:      # ← これを必ず追加してください
 
 jobs:
   build:
