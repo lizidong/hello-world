@@ -22,3 +22,5 @@ jobs:
           # ここにWSL上で実行したいコマンドを書く
           python3 --version
           sudo apt -y update
+          whoami
+          
